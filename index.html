@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Hi, that's a test. It SHOULD work, but there's always that little chance that it won't :( .</h1>
+    <button id="confirmBtn">confirm that it works</button>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        let confirmBtn = document.getElementById("confirmBtn");
+
+        confirmBtn.addEventListener("click", function(e){
+            e.preventDefault();
+            socket.emit('btnPress', "confirmBtn");
+        });
+    </script>
+</body>
+</html>

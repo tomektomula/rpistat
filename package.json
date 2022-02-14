@@ -1,0 +1,9 @@
+{
+    "name": "rpistat",
+    "version": "0.0.1",
+    "description": "A lightweight Raspberry PI control panel along with a live-monitoring page in one.",
+    "dependencies": {
+        "express": "^4.17.2",
+        "socket.io": "^4.4.1"
+    }
+}
